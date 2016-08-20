@@ -26,12 +26,10 @@ gulp.task '1:html', ->
 
 gulp.task '2:js', ->
   browserify config.paths.mainJs
-    .transform "babelify", {
-      presets: [
-        "es2015"
-        "react"
-      ]
-    }
+    .transform "babelify", presets: [
+      "es2015"
+      "react"
+    ]
     .bundle()
     .on 'error', console.error.bind(console)
     .pipe source 'bundle.js'
@@ -51,7 +49,7 @@ gulp.task '4:images', ->
 
 gulp.task '5:lint', ->
   gulp.src config.paths.js
-    .pipe lint config: 'eslint.config.json'
+    .pipe lint configFile: 'eslint.config.json'
     .pipe lint.format()
 
 gulp.task '6:connect', ->

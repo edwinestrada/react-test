@@ -3,7 +3,7 @@
 var React = require('react');
 
 var logoStyle = {
-  'max-height': 40
+  maxHeight: 40
 };
 
 var Header = React.createClass({
