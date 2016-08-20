@@ -36,6 +36,21 @@ var Gallery = require('./components/common/gallery');
         },
         {
           src: 'https://img.buzzfeed.com/buzzfeed-static/static/2016-01/3/12/enhanced/webdr15/anigif_enhanced-20246-1451843224-6_preview.gif'
+        },
+        {
+          src: 'https://img.buzzfeed.com/buzzfeed-static/static/2016-01/3/12/enhanced/webdr15/anigif_enhanced-20246-1451843224-6_preview.gif'
+        },
+        {
+          src: 'https://img.buzzfeed.com/buzzfeed-static/static/2016-01/3/12/enhanced/webdr15/anigif_enhanced-20246-1451843224-6_preview.gif'
+        },
+        {
+          src: 'https://img.buzzfeed.com/buzzfeed-static/static/2016-01/3/12/enhanced/webdr15/anigif_enhanced-20246-1451843224-6_preview.gif'
+        },
+        {
+          src: 'https://img.buzzfeed.com/buzzfeed-static/static/2016-01/3/12/enhanced/webdr15/anigif_enhanced-20246-1451843224-6_preview.gif'
+        },
+        {
+          src: 'https://img.buzzfeed.com/buzzfeed-static/static/2016-01/3/12/enhanced/webdr15/anigif_enhanced-20246-1451843224-6_preview.gif'
         }
       ];
 
@@ -49,11 +64,17 @@ var Gallery = require('./components/common/gallery');
           Child = Home;
       }
 
+      var gridStyle = {
+        margin: 5
+      };
+
       return (
         <div>
           <Header />
           <Child />
-          <Gallery elements={elements}/>
+          <div style={gridStyle}>
+            <Gallery elements={elements} />
+          </div>
         </div>
       );
     }
